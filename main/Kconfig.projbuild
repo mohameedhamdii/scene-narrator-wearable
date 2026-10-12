@@ -1,0 +1,18 @@
+menu "Scene Narrator"
+
+    config SCENE_NARRATOR_SIMULATE
+        bool "Enable hardware simulation mode"
+        default n
+        help
+            Run without physical camera, audio, or button hardware.
+            Useful for development on ESP-IDF simulator or CI.
+            Disable for real ESP32-P4 hardware deployment.
+
+    config SCENE_NARRATOR_BATTERY_MONITOR
+        bool "Enable battery voltage monitoring"
+        default n
+        help
+            Read battery voltage from GPIO ADC with 2:1 divider.
+            Disable if no voltage divider is wired to avoid false shutdowns.
+
+endmenu

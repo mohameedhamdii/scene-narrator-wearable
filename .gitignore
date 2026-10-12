@@ -1,0 +1,40 @@
+# ESP-IDF build artifacts
+build/
+sdkconfig
+sdkconfig.old
+dependencies.lock
+managed_components/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+dist/
+
+# Models (large binaries — download separately)
+models/*.bin
+models/*.tflite
+models/*.gguf
+models/*.onnx
+!models/README.md
+!models/.gitkeep
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Hardware CAD binaries (optional local copies)
+hardware/schematic.pdf
+hardware/pcb_layout.pdf
+hardware/enclosure_stl/*.stl

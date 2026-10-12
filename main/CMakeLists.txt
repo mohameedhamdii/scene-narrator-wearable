@@ -1,0 +1,25 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "spiffs_mount.c"
+        "power_manager.c"
+        "camera_capture.c"
+        "vlm_inference.c"
+        "model_loader.c"
+        "ocr_engine.c"
+        "tts_engine.c"
+        "audio_player.c"
+        "ui.c"
+    INCLUDE_DIRS "."
+    REQUIRES
+        nvs_flash
+        esp_timer
+        esp_adc
+        driver
+        esp_pm
+        spiffs
+        esp32-camera
+        tflite-micro
+        piper-lite
+        led_strip
+)
